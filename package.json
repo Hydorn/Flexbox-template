@@ -1,0 +1,22 @@
+{
+  "name": "flexbox-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hydorn/Flexbox-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hydorn/Flexbox-template/issues"
+  },
+  "homepage": "https://github.com/Hydorn/Flexbox-template#readme",
+  "devDependencies": {
+    "sass": "^1.54.0"
+  }
+}
