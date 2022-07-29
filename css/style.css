@@ -57,16 +57,20 @@ body {
 
 .content {
   display: flex;
-  justify-content: space-between;
-  align-content: stretch;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .sidebar {
-  background-color: black;
+  background-color: var(--color-grey-dark-1);
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
+  height: 80rem;
   background-color: #fff;
   flex: 1;
 }
@@ -141,20 +145,20 @@ body {
   position: relative;
 }
 .user-nav__icon {
-  margin-top: 1rem;
   height: 2.25rem;
   width: 2.25rem;
   fill: var(--color-grey-dark-2);
 }
 .user-nav__notification {
   position: absolute;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 900;
   height: 1.75rem;
   width: 1.75rem;
   border-radius: 50%;
   background-color: var(--color-primary-light);
   color: #fff;
-  top: 2rem;
+  top: 1.25rem;
   right: 1.25rem;
   display: flex;
   justify-content: center;
@@ -164,6 +168,157 @@ body {
   height: 3.75rem;
   border-radius: 100px;
   margin-right: 1rem;
+}
+
+.side-nav {
+  list-style: none;
+  margin-top: 3.5rem;
+  font-size: 1.4rem;
+}
+.side-nav__item {
+  position: relative;
+  /*&:hover:not(:first-child) {
+      background-color: #666;
+  }*/
+}
+.side-nav__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.side-nav__item--active {
+  background-color: var(--color-primary);
+}
+.side-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--color-primary);
+  transform: scaleY(0);
+  transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+}
+.side-nav__item:hover::before, .side-nav__item:active::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+.side-nav__item:active::before {
+  background-color: var(--color-primary-light);
+}
+.side-nav__link:link, .side-nav__link:visited {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: currentColor;
+  margin-right: 2rem;
+}
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--color-grey-ligth-4);
+  padding: 2.5rem;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
+}
+.overview__heading {
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 1.5rem 3rem;
+  font-size: 2.25rem;
+}
+.overview__stars {
+  margin-right: auto;
+  display: flex;
+}
+.overview__stars--icon, .overview__location--icon {
+  height: 1.75rem;
+  width: 1.75rem;
+  fill: var(--color-primary);
+}
+.overview__location {
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+}
+.overview__location--icon {
+  margin-right: 0.5rem;
+}
+.overview__rating {
+  background-color: var(--color-primary);
+  align-self: stretch;
+  padding: 0rem 2.25rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
+}
+.overview__rating--average {
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-bottom: -3px;
+}
+.overview__rating--count {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  background-color: transparent;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-inline:hover {
+  color: var(--color-grey-dark-1);
+}
+.btn-inline:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

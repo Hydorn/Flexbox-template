@@ -93,7 +93,7 @@
     }
 
     &__icon {
-        margin-top: 1rem ;
+        //margin-top: 1rem ;
         height: 2.25rem;
         width: 2.25rem;
         fill: var(--color-grey-dark-2);
@@ -101,14 +101,15 @@
 
     &__notification {
         position: absolute;
-        font-size: 1rem;
+        font-size: .9rem;
+        font-weight: 900;
         height: 1.75rem;
         width: 1.75rem;
         border-radius: 50%;
         background-color: var(--color-primary-light);
         color: #fff;
         
-        top: 2rem;
+        top: 1.25rem;
         right: 1.25rem;
 
         //center text using flex
@@ -122,7 +123,4 @@
         border-radius: 100px;
         margin-right: 1rem;
     }
-
-    &__user-name {}
-
 }
