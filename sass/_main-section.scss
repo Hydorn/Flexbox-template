@@ -176,6 +176,10 @@
         margin-right: auto;
     }
     
+    &__friends {
+        display: flex;
+    }
+    
     &__img {
         box-sizing: content-box;
         width: 4rem;
